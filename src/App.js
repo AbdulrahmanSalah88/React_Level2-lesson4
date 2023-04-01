@@ -4,9 +4,9 @@ import HTML from "./pages/html";
 import Css from "./pages/css";
 import Javascript from "./pages/javascript";
 
-import {useContext } from "react";
+import { useContext } from "react";
 import DataContext from "./context/DataContext";
- 
+
 
 
 const router = createBrowserRouter([
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
 
 
 function App() {
-  const {theme} = useContext(DataContext);
+  const { theme } = useContext(DataContext);
   return (
     <div className={`${theme}`}>
 

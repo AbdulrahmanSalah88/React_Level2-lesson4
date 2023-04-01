@@ -1,20 +1,38 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
-import '../theme.css';
+import "../theme.css";
 import { useContext } from "react";
 import ThemeContext from "../context/DataContext";
 
-
 const Header = () => {
-  const {theme, Dark } = useContext(ThemeContext);
+  const { theme, Dark } = useContext(ThemeContext);
   return (
     <div className="myheader">
       <header className="hide-when-mobile ali">
         <h1>
           <Link to="/">c4a.dev</Link>
         </h1>
-        <button onClick={() => {Dark(theme === `Light` ? `Dark` :`Light`)}} className="theme-btn" >{theme}</button>
+        {/* <button
+          onClick={() => {
+            Dark(theme === `Light` ? `Dark` : `Light`);
+          }}
+          className="theme-btn"
+        >
+          {theme}
+        </button> */}
+        <i
+          onClick={() => {
+            Dark(theme === `Light` ? `Dark` : `Light`);
+          }}
+          className="fa-regular fa-sun"
+        ></i>
+        <i
+          onClick={() => {
+            Dark(theme === `Light` ? `Dark` : `Light`);
+          }}
+          class="fa-regular fa-moon"
+        ></i>
 
         <ul className="flex">
           <li className="main-list">
